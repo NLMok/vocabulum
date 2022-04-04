@@ -4,7 +4,7 @@ Vocabulum es un proyecto final para el curso de JavaScrip de CoderHouse.
 
 Se basa en ser una herramienta de apoyo en el estudio de una lengua extranjera (italiano en este caso pero puede ser (y será) ampliado a otros idiomas).
 
-El main del sitio está dividido en 4 secciones principales.
+El main del sitio está dividido en 4 secciones principales, con formato de escritorio.
 
    Primera sección
 La primera de ellas tiene un formulario, los listados junto con el botón para la restauración de la información y el botón de muestra (que está a los efectos de que el profesor no tenga que ingresar muchas palabras en el formulario para poder probar las funcionalidades del trabajo final).
