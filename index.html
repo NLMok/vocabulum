@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>vocabulum</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./media/logo.png" alt="logo">
+        </div>
+        <div class="titulo">
+            <h1 class="tituloHeader">Base de datos de vocabulario.</h1>
+            <p>Te acompañamos en el estudio de la lengua italiana.</p>
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <button class="inicio">Planilla completa</button>
+                </li>
+                <li>
+                    <button class="lenguaPartida">Desde el italiano</button>
+                </li>
+                <li>
+                    <button class="lenguaMeta">Desde el español</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="principal">
+            <div class="carga">
+                <h3>Ingresá la nueva palabra que aprendiste.</h3>
+                <form class="formulario">
+                    <label for="nuevoSignificante">Palabra nueva <small>(italiano)</small>.</label>
+                    <input type="text" class="nuevoSignificante">
+                    <small class="error"></small>
+                    <label for="clase">Clase de palabra.</label>
+                    <select class="clase">
+                        <option value="---">---</option>
+                        <option value="adj">adjetivo</option> 
+                        <option value="adv">adverbio</option> 
+                        <option value="art">artículo</option>
+                        <option value="conj">conjunción</option> 
+                        <option value="int">interjección</option> 
+                        <option value="prep">preposición</option>
+                        <option value="pron">pronombre</option>
+                        <option value="sust">sustantivo</option>
+                        <option value="verb">verbo</option>
+                        <option value="perif">perífrase</option>
+                        <option value="exp">expresión</option>
+                     </select>
+                    <label for="traduccion">Traducción.</label>
+                    <input type="text" class= "traduccion">
+                    <small class="error"></small>
+                    <label for="definicion">Definición.</label>
+                    <textarea type="text" class= "definicion"></textarea> 
+                    <label for="categoria">Categoría.</label>
+                    <p class="txtVerCategorias">Ver categorías ya usadas.</p>
+                    <input type="text" class= "categoria">
+                    <small class="error"></small>
+                    <input type="submit" value="agregar" class="btnAgregar">
+                    <p class="agregada"></p>
+                </form>
+                
+            </div>
+            <article class="listas">
+                <div class="planillas">
+                    <div class="planillaInicio"><!--aparece con JS-->
+                    </div>
+                    <div class="planillaBilingue">
+                    </div>
+                    <div class="planillaInverso">
+                    </div>
+                </div>
+                <div class="restauracion">
+                    <input type="submit" value="restaurar última planilla" class="btnRestaurar">
+                    <input type="submit" value="muestra" class="btnMuestra">
+                </div>
+            </article>
+            <div class="categoriasUsadas">
+            </div>
+        </section>
+        <section class="repaso">
+            <article>
+                <h2>Ahora, a repasar el vocabulario</h2>
+                <p>Cada vez que aprietes en "Mostrar palabra" saldrá aleatoriamente una palabra.</p>
+                <p>Tenés ocho segundos hasta que aparezca su traducción.</p>
+                <p>Si querés una nueva palabra cliqueá en "Mostrar nueva palabra" pero si querés terminar la ejercitación cliqueá "Terminar repaso".</p>
+                <p><small>Recordá restaurar la planilla de ser necesario.</small></p>
+            </article>
+            <div class="memoria">
+                <h3>Desde el italiano.</h3>
+                <button class="btnPalabraAleatoriaLP">Mostrar palabra.</button>
+                <button class="btnNuevaPalabraAleatoriaLP">Mostrar nueva palabra.</button>
+                <button class="btnTerminarPalabraAleatoriaLP">Terminar repaso.</button>
+                <div class="palabraAleatoriaLP"><!--se carga con JS-->
+                </div>
+            </div>
+            <div class="memoria">
+                <h3>Desde el español.</h3>
+                <button class="btnPalabraAleatoriaLM">Mostrar palabra.</button>
+                <button class="btnNuevaPalabraAleatoriaLM">Mostrar nueva palabra.</button>
+                <button class="btnTerminarPalabraAleatoriaLM">Terminar repaso.</button>
+                <div class="palabraAleatoriaLM"><!--se carga con JS-->           
+                </div>
+            </div>
+        </section>
+        <section class="repaso">
+            <article>
+                <h2>Pensá cuál es la que no va.</h2>
+                <p>Hacé clic en el botón para que cargue las tarjetas, tenés que pinchar la tarjeta cuyo término no tenga relación con los demás, en base a las categorías que indicaste al cargar la nueva palabra.</p>
+                <p>Cuando cliqueés en ése te indicará si estás en lo correcto o no.</p>
+                <p><small>Recordá restaurar la planilla de ser necesario.</small></p>
+            </article>
+            <div class="desubicado">
+                <button class="btnDesubicado">Mostrar tarjetas.</button>
+                <button class="btnRenovarTarjetas">Renovar tarjetas.</button>
+                <button class="btnTerminar">Terminar repaso.</button>
+                <div class="grilla"><!--se carga con JS-->
+                </div>
+            </div>
+        </section>
+        <section class="importado">
+            <article>
+                <h2>Veamos más vocabulario.</h2>
+                <p>Elegí la categoría que desees.</p>
+                <div>
+                    <button class="JSONElClima">El clima</button>
+                    <button class="JSONElDormitorio">En el dormitorio</button>
+                    <button class="JSONLaCasa">En la casa</button>
+                    <button class="JSONLaCocina">En la cocina</button>
+                    <button class="JSONLaSala">En la sala</button>
+                    <button class="JSONLasBebidas">Las bebidas</button>
+                    <button class="JSONLosAnimales">Los animales</button>
+                    <button class="JSONLosColores">Los colores</button>
+                    <button class="JSONLosDeportes">Los deportes</button>
+                </div>
+            </article>
+            <div class="vocImportado">
+                <video class="videoVocabulum" src="./media/apuntes.mp4" autoplay loop muted></video>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <p>Nicolás Levati Mošić</p>
+                <p>Proyecto final JavaScript</p>
+                <p>Comisión 25315</p>
+                <p>CoderHouse</p>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/nicolaslevatimosich/"><img src="./media/NLM.png" alt="{NLM} Developer"></a>
+            </div>
+        </footer>
+    </main>
+    <script src="./jquery.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
+
+

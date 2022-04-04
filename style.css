@@ -1,0 +1,335 @@
+/*Generales*/
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#6ec1e484;
+    border-radius: 10px;
+}
+body{
+    margin: 0; 
+    padding: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Header*/
+header{
+    display: grid;
+    grid-template-columns: 10% 15% 25% 25% 25%;
+    grid-template-areas: ".   b   b .   ."
+                        "a  b   b   c   c";
+    align-items: center;
+    margin: 10px;
+    border: 2px solid #6EC1E4;
+    border-radius: 10px;
+    background-color: white;
+    height: 10vw;
+}
+.logo{
+    grid-area: a;
+}
+.logo img{
+    height: 10vw;
+    position: absolute;
+    top: 10px;
+}
+.titulo{
+    grid-area: b;
+    text-align: center;
+}
+.menu{
+    grid-area: c;
+    display: none;
+}
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+}
+/*Main*/
+.principal{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "a   b"
+                        "c   c";
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 2px solid #6EC1E4;
+    border-radius: 10px;
+}
+.carga{
+    grid-area: a;
+    margin: 5%;
+    padding: 5%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.planillas{
+    display: none;
+    grid-area: b;
+    margin: 5%;
+    padding: 5%;
+    background-color: white;
+    border-radius: 10px;
+    overflow-y: scroll;
+    height: 500px;
+}
+.titularPlanilla{
+    text-align: center;
+}
+.categoriasUsadas{
+    position: absolute;
+    left: 30%;
+    display: none;
+}
+.categoriasUsadas div{
+    color: black;
+    border: solid #3599dc;
+    background-color: #40a0e0b6;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0px 2px 0px 2px;
+    margin: 1px;
+    font-size: small;
+}
+.mensajes{
+    background-color: white;
+    border-radius: 10px;
+    min-height:50px;
+    text-align: center;
+    padding-top: 5px;
+    color: tomato;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+.btnEliminar{
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0px 3px;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.714);
+}
+.restauracion input{
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0px 5px;
+    color: black;
+    margin-right: 1%;
+    background-color: #6EC1E4;
+}
+button, .btnAgregar{
+    margin-top: 20px;
+    background-color: #6EC1E4;
+    border: solid 1px #3991b6;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    width: 95%;
+    max-width: 200px;
+    place-self: center;
+    cursor: pointer;
+    padding: 5px;
+}
+.btnRenovarTarjetas, .btnTerminar{
+    display: none;
+}
+button:hover, .btnAgregar:hover, .btnRenovarTarjetas:hover, .btnTerminar:hover{
+    color: white;
+}
+.listado{
+    width: 100%;
+}
+.listadoInicio, .listadoVocImportado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    background-color: rgba(128, 128, 128, 0.347);
+    margin-bottom: 1px;
+}
+.listadoInicio p, .listadoVocImportado p{
+    margin: 0;
+}
+
+.subDivSignificante{
+    width: 20%;
+    font-weight: bolder;
+}
+.subDivClase{
+    width: 6%;
+    font-size: small;
+    font-style: italic;
+}
+.subDivTraduccion{
+    width: 20%;
+    font-style: italic;
+}
+.subDivDefinicion{
+    width: 35%;
+    font-size: small;
+}
+.subDivCategoria{
+    width: 17%;
+    font-size: small;
+    font-weight: bold;
+}
+.subDivEliminar{
+    width: 2%;
+}
+
+input, select, textarea{
+    outline: none;
+    min-height: 20px;
+    border: none;
+    border-bottom: solid 1px #4055b287;
+    resize: none;
+}
+textarea{
+    height: 50px;
+}
+input[type="text"]:focus, select:focus, textarea:focus{
+    background-color: #6ec1e43b;
+    border-bottom: solid 1px #6ec1e43b;
+}
+
+.error{
+    color: red;
+}
+.error-border{
+    border-bottom: 1px solid red;
+}
+.agregada{
+    color: #8db240;
+}
+.btnVerCategorias{
+    margin-left: 20%;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    cursor: pointer;
+    background-color: white;
+}
+
+.repaso, .importado{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border: 2px solid #6EC1E4;
+    border-radius: 10px;
+    justify-content: center;
+    max-height: 600px;    
+}
+.repaso article, .importado article{
+    width: 30%;
+    margin: 2%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+}
+.importado article div{
+    height: 80%;
+    overflow-y: scroll;
+}
+.memoria{
+    width: 30%; 
+    margin: 2%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+.palabraAleatoriaLM div, .palabraAleatoriaLP div {
+    background-color: rgb(127, 109, 228);
+    border-radius: 10px;
+    padding: 10% 0%;
+    text-align: center;
+    width: 100%;
+}
+.btnNuevaPalabraAleatoriaLM, .btnTerminarPalabraAleatoriaLM, .btnTerminarPalabraAleatoriaLP, .btnNuevaPalabraAleatoriaLP{
+    display: none;
+}
+.contenedorSignificanteLM, .contenedorSignificanteLP, .contenedorTraduccionLM, .contenedorTraduccionLP{
+    display: none;
+    margin: 1%;
+}
+.desubicado, .vocImportado{
+    width: 70%;
+    margin: 2%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.limpiarVocImportado{
+    text-align: end;
+    margin-bottom: 1%;
+}
+.videoVocabulum{
+    height: 25vw;
+    opacity: 0.8;
+}
+.grilla{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tarjetaCorrecto,.tarjetaIncorrecto {
+    border-radius: 10px;
+    text-align: center;
+    background-color: burlywood;
+    margin: 0.5%;
+    width: 19%;
+    padding: 30px 0px;
+    font-size: 17px;
+}
+.verde{
+    background-color: #8db240;
+}
+.rojo{
+    background-color: #b24840;
+}
+.txtVerCategorias{
+    text-align: right;
+    font-size: smaller;
+    margin: 0;
+    cursor:alias;
+}
+
+/*Footer*/
+footer{
+    background-color: #173248;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    border: 2px solid #6EC1E4;
+    border-radius: 10px;
+    padding: 10px;
+}
+footer p{
+    color: white;
+    margin: 0px 0px 5px 0px;
+}
+footer img{
+    height: 100px;
+}
